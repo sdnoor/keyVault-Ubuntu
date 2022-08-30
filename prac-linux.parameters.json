@@ -19,6 +19,9 @@
     },
     "adminKey": {
       "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCeRbtV4oeYRilA7aWZ+zqCUvhFXix5nrscaa3NPvQi/yUZIcg3YlOSmXJKtYWSymncEkjTes6SXWG8cnZN2GcyDv18kpm94PkY0y28fAWjxRqH8Yr3perewcSJQoe3h3XvuZc/1jC6s415hYynSYZt0MxRPreB8XcG5kaDp1tM56OxDOKjsly8Aoz8rHGHxFF5XbiqSinaX1LdZt7++EgBvYqzP6CxYQFZQMVPlHmToUyOzupgIUh5x9hO6Tm/0uFoL6IQfGLK7ZawOwaGXhOYzEPkPyKuxTJAlTrRnO/U6i0FCF7WV0BZTXhY12zEIEHQcyaUZZ7uujwpZSmkmDhVDbCWjUDdkHRTumUHcNbwK/TP88ULp6E01JKa/vbQrRAFHOXA1GXFbCQhSr3JDxu4UgHJRPmhBurgqeBv8T82Pw11D2eFrlhy/zuHim5ZHGBYdJyDCIwFWxoJRuuhnqjZ6+wXaX6LA1qzpneCpV6zVj6yr5yWFiJmvzcvIqD1RL0="
+    },
+    "environmentType": {
+      "value": "dev"
     }
   }
 }
