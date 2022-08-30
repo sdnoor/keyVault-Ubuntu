@@ -4,6 +4,7 @@ param computerName string
 param vmSize string
 param adminUsername string
 param adminKey string
+param authenticationType string = 'sshPublicKey'
 
 @allowed([
   'prod'
@@ -43,7 +44,7 @@ resource ubuntuVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
       computerName: computerName
       adminUsername: adminUsername
       adminPassword: adminKey
-      linuxConfiguration: any(linuxConfiguration == 'password' ? 'null':'linuxConfiguration')
+      linuxConfiguration: any(authenticationType == 'password' ? 'null':'linuxConfiguration')
     }
       
     storageProfile: {
