@@ -69,7 +69,7 @@ resource ubuntuVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
     diagnosticsProfile: {
       bootDiagnostics: {
         enabled: true
-        storageUri: 'storageUri'
+        storageUri: storageaccount.properties.primaryEndpoints.blob
       }
     }
   }
