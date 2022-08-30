@@ -5,7 +5,6 @@ param vmSize string
 param adminUsername string
 param adminKey string
 
-
 @allowed([
   'prod'
   'dev'
@@ -45,6 +44,7 @@ resource ubuntuVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
       adminUsername: adminUsername
       adminPassword: adminKey
       linuxConfiguration: any(linuxConfiguration == 'password' ? 'null':'linuxConfiguration')
+    }
       
     storageProfile: {
       imageReference: {
@@ -73,7 +73,6 @@ resource ubuntuVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
       }
     }
   }
-}
 }
 
 resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
