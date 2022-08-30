@@ -43,7 +43,7 @@ resource ubuntuVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
       computerName: computerName
       adminUsername: adminUsername
       adminPassword: adminKey
-      linuxConfiguration: any(authenticationType == 'password'? null : linuxConfiguration)
+      linuxConfiguration: any(authenticationType == 'password'? 'null' : 'linuxConfiguration')
      
     }
     storageProfile: {
