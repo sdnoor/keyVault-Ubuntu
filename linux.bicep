@@ -20,6 +20,7 @@ var nicName = 'nic-${project}-${location}-${environmentType}'
 var pubIP = 'pubIP-${project}-${location}-${environmentType}'
 var vNetName = 'vNet-${project}-${location}-${environmentType}'
 var storageAccountName = 'st${project}${location}${environmentType}'
+
 var  linuxConfiguration = {
   disablePasswordAuthentication: true
   ssh: {
@@ -43,7 +44,7 @@ resource ubuntuVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
       computerName: computerName
       adminUsername: adminUsername
       adminPassword: adminKey
-      linuxConfiguration: any(authenticationType == 'password'? 'null' : 'linuxConfiguration')
+      linuxConfiguration: any(authenticationType == 'password'? 'null' : linuxConfiguration)
      
     }
     storageProfile: {
