@@ -1,0 +1,17 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+ "parameters": {
+    "location": {
+        "value": "westeurope"
+    },
+    "project": {
+        "value": "abcub"
+    },
+    "computerName": {
+        "value": "cebsubuntu"
+    },
+    "adminUsername": {
+        "value": "logitech"
+    }
+    }
+ }
