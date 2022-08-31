@@ -9,10 +9,10 @@ param project string
 
 param computerName string
 param adminUsername string
+@secure()
 param adminKey string
 
 param authenticationType string = 'sshPublicKey'
-
 
 var vmName = 'ubuntu-${project}-${location}-${environmentType}'
 var osDiskName = 'osDisk-${project}-${location}-${environmentType}'
@@ -45,7 +45,6 @@ resource ubuntuVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
       adminUsername: adminUsername
       adminPassword: adminKey
       linuxConfiguration: any(authenticationType == 'password'? null : linuxConfiguration)
-     
     }
     storageProfile: {
       imageReference: {
@@ -70,6 +69,8 @@ resource ubuntuVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
    
   }
 }
+
+
 
 resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
   name: storageAccountName
@@ -138,7 +139,3 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
     ]
   }
 }
-
-
-
-
